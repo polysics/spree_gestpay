@@ -12,7 +12,7 @@ module SpreeGestpay
     end
 
     config.before_configuration do
-      Rails.configuration.gestpay_logger = ActiveSupport::Logger.new(Rails.root.join('log', 'gestpay.log'))
+      Rails.configuration.gestpay_logger = Rails.logger
     end
 
     def self.activate
